@@ -1,9 +1,13 @@
 import logging
 import math
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch import autograd
+
+import mindspore as ms
+from mindspore import nn, ops, Tensor
+from mindspore.train import Model
+from mindspore.nn import optim
+import mindspore.ops as ops
+from mindspore import context
+from mindspore.common import set_seed
 
 
 from fairseq import utils
